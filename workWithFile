@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    //ofstream MyFile;
+    //MyFile.open("test.txt");
+    ofstream MyFile("next.txt", ios::app);
+    if(MyFile.is_open()){
+        MyFile << "Some text.\nHello world!" << endl;
+    }
+    else{
+        cout << "Something went wrong.";
+    }
+    MyFile.close();
+    return 0;
+}
